@@ -105,15 +105,6 @@ public class ShareMenuReactView: NSObject {
             if provider.hasItemConformingToTypeIdentifier(kUTTypeURL as String) {
                 urlProvider = provider as? NSItemProvider
                 break
-            } else if provider.hasItemConformingToTypeIdentifier(kUTTypeText as String) {
-                textProvider = provider as? NSItemProvider
-                break
-            } else if provider.hasItemConformingToTypeIdentifier(kUTTypeImage as String) {
-                imageProvider = provider as? NSItemProvider
-                break
-            } else if provider.hasItemConformingToTypeIdentifier(kUTTypeData as String) {
-                dataProvider = provider as? NSItemProvider
-                break
             }
         }
 
@@ -125,7 +116,7 @@ public class ShareMenuReactView: NSObject {
             }
         } else if (imageProvider != nil) {
             imageProvider.loadItem(forTypeIdentifier: kUTTypeImage as String, options: nil) { (item, error) in
-                let imageUrl: URL! = item as? URL
+                let imageUrl: NSURL! = item as? NSURL
 
                 if (imageUrl != nil) {
                     if let imageData = try? Data(contentsOf: imageUrl) {
