@@ -4,7 +4,7 @@
   "version": "5.0.5",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meedan/react-native-share-menu.git"
+    "url": "git+https://github.com/MoonSiftTech/react-native-share-menu.git"
   },
   "keywords": [
     "react-component",
