@@ -3,7 +3,7 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-  s.name         = "RNShareMenu"
+  s.name         = "MSShareMenu"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
@@ -16,10 +16,7 @@ Pod::Spec.new do |s|
 
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
-  s.exclude_files = [
-    "ios/ShareViewController.swift",
-    "ios/ReactShareViewController.swift"
-  ]
+  s.exclude_files = []
 
 
   s.dependency "React"
